@@ -18,6 +18,7 @@ import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 
 public class ZvykForm extends JFrame implements ActionListener, Base {
+
   public JPanel zvykPanel;
   public JButton captureBtn;
   public JButton stopBtn;
