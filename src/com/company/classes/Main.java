@@ -1,5 +1,4 @@
-package com.company;
-
+package com.company.classes;
 
 import com.company.classes.ZvykForm;
 import java.awt.Dimension;

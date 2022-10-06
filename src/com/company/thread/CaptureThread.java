@@ -42,6 +42,7 @@ public class CaptureThread extends Thread {
           }
         }
         this.byteArrayOutputStream.close();
+        targetDataLine.close();
       } catch (Exception e) {
         System.out.println(e);
         System.exit(0);

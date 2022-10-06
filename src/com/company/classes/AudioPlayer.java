@@ -15,6 +15,8 @@ import javax.swing.JFileChooser;
 
 public class AudioPlayer  {
 
+  public static byte[] audioData;
+
   public CaptureThread thread;
   public PlayThread thread228;
   public ZvykForm form;
@@ -27,7 +29,7 @@ public class AudioPlayer  {
   public void playAudio() {
     try {
 
-      byte[] audioData = this.thread.byteArrayOutputStream.toByteArray();
+      audioData = this.thread.byteArrayOutputStream.toByteArray();
 
       //Создаем поток для проигрывания
       // данных и запускаем его
@@ -36,6 +38,7 @@ public class AudioPlayer  {
       this.thread228 = new PlayThread(audioData);
       Thread playThread = new Thread(thread228);
       playThread.start();
+
     } catch (Exception e) {
       System.out.println(e);
       System.exit(0);
