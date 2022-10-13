@@ -42,34 +42,11 @@ public class ZvykForm extends JFrame implements ActionListener, Base {
     playBtn.addActionListener(this);
     saveBtn.addActionListener(this);
 
-
-    JMenuBar menuBar = new JMenuBar();
-    /**
-     * Информация обо мне на НПК не пригодится
-     */
-
-    JMenu editMenu = new JMenu("Информация о величайщем");
-    editMenu.setMnemonic(KeyEvent.VK_E);
-    menuBar.add(editMenu);
-
-    JMenuItem menuItem4 = new JMenuItem("Veteroch4k");
-    editMenu.add(menuItem4);
-
-    menuItem4.addActionListener(e -> {
-      try {
-        Desktop.getDesktop()
-            .browse(new URL("https://steamcommunity.com/profiles/76561198796674435/").toURI());
-      } catch (Exception ex) {
-        ex.printStackTrace();
-      }
-    });
-
     captureBtn.setEnabled(true);
     stopBtn.setEnabled(false);
     playBtn.setEnabled(false);
     saveBtn.setEnabled(false);
 
-    this.setJMenuBar(menuBar);
     this.getContentPane().add(zvykPanel);
 
 
