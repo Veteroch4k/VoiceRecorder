@@ -1,12 +1,13 @@
-package com.company.classes;
+package Veteroch4k.classes;
 
-import com.company.interfaces.Base;
-import com.company.thread.CaptureThread;
+import Veteroch4k.interfaces.Base;
+import Veteroch4k.thread.CaptureThread;
+import Veteroch4k.thread.PlayThread;
 import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
-import com.company.thread.PlayThread;
 import javax.sound.sampled.AudioFileFormat;
+import javax.sound.sampled.AudioFileFormat.Type;
 import javax.sound.sampled.AudioFormat;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
@@ -82,7 +83,7 @@ public class AudioPlayer  {
         audioData.length / new AudioFormat(Base.sampleRate, Base.sampleSizeInBits, Base.channels, Base.signed, Base.bigEndian).getFrameSize());
     // Определяем окончательное имя сохраненного файла
     System.out.println("Начать создание голосового файла");
-    AudioSystem.write(ais, AudioFileFormat.Type.WAVE, audioFile);
+    AudioSystem.write(ais, Type.WAVE, audioFile);
     System.out.println(12345);
 
   }

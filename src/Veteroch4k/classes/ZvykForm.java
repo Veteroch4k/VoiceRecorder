@@ -1,20 +1,14 @@
-package com.company.classes;
+package Veteroch4k.classes;
 
-import com.company.interfaces.Base;
-import java.awt.Desktop;
+import Veteroch4k.interfaces.Base;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.KeyEvent;
 import java.io.IOException;
-import java.net.URL;
 import javax.sound.sampled.LineUnavailableException;
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 
-import javax.swing.JMenu;
-import javax.swing.JMenuBar;
-import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 
 public class ZvykForm extends JFrame implements ActionListener, Base {
@@ -48,7 +42,6 @@ public class ZvykForm extends JFrame implements ActionListener, Base {
     saveBtn.setEnabled(false);
 
     this.getContentPane().add(zvykPanel);
-
 
     player = new AudioPlayer(this);
 

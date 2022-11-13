@@ -1,6 +1,5 @@
-package com.company.classes;
+package Veteroch4k.classes;
 
-import com.company.classes.ZvykForm;
 import java.awt.Dimension;
 
 public class Main {

@@ -1,6 +1,6 @@
-package com.company.thread;
+package Veteroch4k.thread;
 
-import com.company.interfaces.Base;
+import Veteroch4k.interfaces.Base;
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import javax.sound.sampled.AudioFormat;
