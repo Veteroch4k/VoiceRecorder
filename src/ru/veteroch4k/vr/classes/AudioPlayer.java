@@ -1,11 +1,11 @@
 package ru.veteroch4k.vr.classes;
 
-import ru.veteroch4k.vr.interfaces.Configuration;
 import ru.veteroch4k.vr.classes.thread.CaptureThread;
+import ru.veteroch4k.vr.classes.thread.PlayThread;
+import ru.veteroch4k.vr.interfaces.Configuration;
 import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
-import ru.veteroch4k.vr.classes.thread.PlayThread;
 import javax.sound.sampled.AudioFileFormat;
 import javax.sound.sampled.AudioFormat;
 import javax.sound.sampled.AudioInputStream;
@@ -19,9 +19,9 @@ public class AudioPlayer implements Configuration {
 
   public CaptureThread thread;
   public PlayThread thread228;
-  public ZvykForm form;
+  public MainMenu form;
 
-  public AudioPlayer(ZvykForm x) {
+  public AudioPlayer(MainMenu x) {
     this.form = x;
 
   }

@@ -1,6 +1,6 @@
-package Veteroch4k.classes;
+package ru.veteroch4k.vr.classes;
 
-import Veteroch4k.interfaces.Base;
+import ru.veteroch4k.vr.interfaces.Configuration;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
@@ -11,7 +11,7 @@ import javax.swing.JFrame;
 
 import javax.swing.JPanel;
 
-public class ZvykForm extends JFrame implements ActionListener, Base {
+public class MainMenu extends JFrame implements ActionListener, Configuration {
 
   public JPanel zvykPanel;
   public JButton captureBtn;
@@ -24,7 +24,7 @@ public class ZvykForm extends JFrame implements ActionListener, Base {
   public boolean stopCapture = false;
 
 
-  public ZvykForm() {
+  public MainMenu() {
     setTitle("Обработка звука");
     setLocation(700, 300);
     setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -42,6 +42,7 @@ public class ZvykForm extends JFrame implements ActionListener, Base {
     saveBtn.setEnabled(false);
 
     this.getContentPane().add(zvykPanel);
+
 
     player = new AudioPlayer(this);
 
@@ -63,8 +64,6 @@ public class ZvykForm extends JFrame implements ActionListener, Base {
         ex.printStackTrace();
       }
       //captureAudio();
-
-
     }
     if (e.getSource() == stopBtn) {
       captureBtn.setEnabled(true);
